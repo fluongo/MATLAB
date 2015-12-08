@@ -1,6 +1,19 @@
 function [ ica_segments_f, segcentroid_f, exclude ] = distancefilter( ica_segments, segcentroid, min_distance )
-%DISTANCEFILTER Summary of this function goes here
-%   Detailed explanation goes here
+%DISTANCEFILTER Filter to remove cells that are duplicates across multiple
+%ICs, by measuring the distance between segment centroids
+% Inputs:
+%       ica_segments - Output from ica segmentation
+%       segcentroid - Corresponding centroids for each segment
+%       min_distance - Minimum distance (in pixels) for which to say two segments are
+%       the same
+
+%  Outputs:
+%       ica_segments_f - Filtered ica_segments, by default will keep the
+%       higher ordered of the two segments, this will generally correspond
+%       to the higher SNR segment
+%       segcentroid_f - Corresponding centroids
+%       exclude - Indices of excluded segments
+
 
 D = pdist(segcentroid);
 sq_D = squareform(D);

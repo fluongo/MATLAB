@@ -2,7 +2,20 @@ function [cell_sig_f0 cell_sig_diff cell_sig_f_f0] = ksdensity_normalization_par
 % KS density normalization using a sized window as indicated by win
 % [cell_sig_f0 cell_sig_diff cell_sig_f_f0] = ksdensity_normalization(cell_sig, win)
 % NOTE: This is the version that attempts to use the parallel processing
-% toolbox
+% toolbox, to make a version of this that does not use parallel processing
+% just replace 'parfor' with 'for'
+%
+%   INPUTS:
+%       cell_sig - Cell signal to smooth
+%       win      - Length of window (timepoints) over which to computer the
+%       kernel density estimate
+%
+%   OUTPUTS:
+%       cell_sig_f0    - Estimate baseline for F0
+%       cell_sig_diff  - F-F0
+%       cell_sig_f_f0  - (F-F0)/F0
+%
+
 cell_sig = cell_sig - min(min(cell_sig')) + 1;
 cell_sig_f0 = zeros(size(cell_sig));
 

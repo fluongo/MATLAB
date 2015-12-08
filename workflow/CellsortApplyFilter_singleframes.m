@@ -3,7 +3,8 @@ function cell_sig = CellsortApplyFilter_singleframes(fn, ica_segments, flims, mo
 %
 %CellsortApplyFilter
 % Read in movie data and output signals corresponding to specified spatial
-% filters
+% filters, Note: This workd on inputs where each frame is an individual
+% tiff file
 %
 % Inputs:
 %     fn - file name of TIFF movie file

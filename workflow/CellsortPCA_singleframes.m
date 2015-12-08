@@ -6,6 +6,10 @@ function [mixedsig, mixedfilters, CovEvals, covtrace, movm, ...
 % CELLSORT
 % Read TIFF movie data and perform singular-value decomposition (SVD)
 % dimensional reduction.
+% 
+%   NOTE: This is the nimmerjahn code except modified to work with single
+%   tiff frames as opposed to tiff stacks, fn in this case corresponds to
+%   the name of the first frame i.e. img_00000_00.tif
 %
 % Inputs:
 %   fn - movie file name. Must be in TIFF format.

@@ -15,6 +15,12 @@ function [spiketimes spt_beg spt_end] = detectspikes5(C, thresh, thresh2, spikew
     
     % mindur is the minimum duration in points for an event
     
+    % RETURNS:
+    %               all outputs are as 1xNspikes
+    %           spiketimes = the peak of each spike time
+    %           spt_beg = Corresponding start time of that event
+    %           spt_end = Corresponding end time
+    
 N = length(C);
 
 Dmask = ones(N-1,1);
