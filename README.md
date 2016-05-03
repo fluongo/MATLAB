@@ -13,3 +13,9 @@ Paper figures - Scripts used to generate certain figures
 
 
 This code is written with the assumption of mapping the sohal server as a network drive on windows with letter Z
+
+Functions are largely adapted from...
+
+<cite> Mukamel et al. 2009. Automated analysis of cellular signals from large-scale calcium imaging data. <cite>
+
+Only major changes are adapting function to deal with single tiffs as tiff stacks are limited to 4GB files due to 32bit indexing. Future releases might make use of either HDF5 or BigTIFF formats.
