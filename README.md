@@ -19,4 +19,4 @@ Functions are largely adapted from...
 
 Only major changes are adapting function to deal with single tiffs as tiff stacks are limited to 4GB files due to 32bit indexing. Future releases might make use of either HDF5 or BigTIFF formats.
 
-* * Code written by Francisco Luongo between 2012 and 2015 in the lab of Vikaas Sohal at UCSF
+*Code written by Francisco Luongo between 2012 and 2015 in the lab of Vikaas Sohal at UCSF*
